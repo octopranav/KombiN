@@ -4,7 +4,7 @@ This is the C# implementation of KombiN, which is an algorithm to get index for 
 
 ## Installation
 
-Available on [NuGet](https://www.nuget.org/packages/Ninja.Pranav.Algorithms.Kombin)
+Available on [NuGet](https://www.nuget.org/packages/Ca.Pranavpatel.Algo.Kombin)
 
 ## Usage
 
