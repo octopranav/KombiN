@@ -26,11 +26,14 @@
  * combination pairs from two finite sets are sorted by their weight
  * in ascending order.
  */
-package ninja.pranav.algorithms.kombin;
+package ca.pranavpatel.algo.kombin;
 
 /**
  * Provides a methods to get index of combination pair
  * and to get combination pair from index value.
+ *
+ * @author Pranavkumar Patel
+ * @version $Id: $Id
  */
 public class Table {
     public final long LengthOfA;
@@ -45,12 +48,13 @@ public class Table {
     public final boolean ZeroBasedIndex;
 
     /**
-     * Initializes a new instance of the {@link Table} class
+     * Initializes a new instance of the {@link ca.pranavpatel.algo.kombin.Table} class
      * and Sets an abstract values useful to get index and combination pair.
+     *
      * @param lengthOfA Number of elements in first set.
      * @param lengthOfB Number of elements in second set.
      * @param zeroBasedIndex True if sets index starts with zero otherwise False.
-     * @throws IllegalArgumentException if length of any set is 0 or less.
+     * @throws java.lang.IllegalArgumentException if length of any set is 0 or less.
      */
     public Table(long lengthOfA, long lengthOfB, boolean zeroBasedIndex) {
         if (lengthOfA < 1 || lengthOfB < 1) {
@@ -90,10 +94,11 @@ public class Table {
 
     /**
      * Get index value for the combination pair.
+     *
      * @param ai Element index of set A.
      * @param bi Element index of set B.
      * @return Index value for the given combination pair.
-     * @throws IllegalArgumentException if element index value is invalid.
+     * @throws java.lang.IllegalArgumentException if element index value is invalid.
      */
     public long GetIndexOfElements(long ai, long bi) {
         if (this.ZeroBasedIndex) {
@@ -137,9 +142,10 @@ public class Table {
 
     /**
      * Get the combination pair for given index value.
+     *
      * @param index Index value of combination pair.
-     * @return combination pair {@link Pair}
-     * @throws IllegalArgumentException if Index value is invalid.
+     * @return combination pair {@link ca.pranavpatel.algo.kombin.Pair}
+     * @throws java.lang.IllegalArgumentException if Index value is invalid.
      */
     public Pair GetElementsAtIndex(long index) {
         if (this.ZeroBasedIndex) {

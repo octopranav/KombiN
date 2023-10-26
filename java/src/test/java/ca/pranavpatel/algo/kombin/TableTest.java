@@ -1,4 +1,4 @@
-package ninja.pranav.algorithms.kombin;
+package ca.pranavpatel.algo.kombin;
 
 import static org.junit.Assert.assertEquals;
 

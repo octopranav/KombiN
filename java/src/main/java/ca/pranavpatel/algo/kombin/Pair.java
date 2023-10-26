@@ -20,14 +20,23 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-package ninja.pranav.algorithms.kombin;
+package ca.pranavpatel.algo.kombin;
 
 /**
  * Combination Pair
+ *
+ * @author Pranavkumar Patel
+ * @version $Id: $Id
  */
 public class Pair {
     public final long ai;
     public final long bi;
+    /**
+     * <p>Constructor for Pair.</p>
+     *
+     * @param ai a long.
+     * @param bi a long.
+     */
     public Pair(long ai, long bi) {
         this.ai = ai;
         this.bi = bi;
