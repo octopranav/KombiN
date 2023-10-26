@@ -3,7 +3,7 @@ using System;
 using Xunit;
 
 [assembly: CLSCompliant(true)]
-namespace Ninja.Pranav.Algorithms.Kombin.tests {
+namespace Ca.Pranavpatel.Algo.Kombin.tests {
 
     /// <summary>
     /// Tests for Table class.

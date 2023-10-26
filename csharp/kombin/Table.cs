@@ -23,7 +23,7 @@
 using System;
 
 [assembly: CLSCompliant(true)]
-namespace Ninja.Pranav.Algorithms.Kombin {
+namespace Ca.Pranavpatel.Algo.Kombin {
     /// <summary>
     /// Provides a methods to get index of combination pair
     /// and to get combination pair from index value.
