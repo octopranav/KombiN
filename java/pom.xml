@@ -4,14 +4,14 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>ninja.pranav.algorithms</groupId>
+  <groupId>ca.pranavpatel.algo</groupId>
   <artifactId>kombin</artifactId>
   <version>1.0.0</version>
   <packaging>jar</packaging>
 
   <name>${project.groupId}:${project.artifactId}</name>
   <description>KombiN is an algorithm to get index for combination pair or to get combination pair from index, where all possible combination pairs from two finite sets are sorted by their weight in ascending order.</description>
-  <url>https://github.com/pranav-ninja/KombiN</url>
+  <url>https://github.com/octopranav/KombiN</url>
 
   <licenses>
     <license>
@@ -23,15 +23,15 @@
   <developers>
     <developer>
       <name>Pranavkumar Patel</name>
-      <email>code@pranav.ninja</email>
-      <organizationUrl>https://github.com/pranav-ninja</organizationUrl>
+      <email>pranav003@gmail.com</email>
+      <organizationUrl>https://github.com/octopranav</organizationUrl>
     </developer>
   </developers>
 
   <scm>
-    <connection>scm:git:git://github.com/pranav-ninja/KombiN.git</connection>
-    <developerConnection>scm:git:ssh://github.com:pranav-ninja/KombiN.git</developerConnection>
-    <url>https://github.com/pranav-ninja/KombiN/tree/master/</url>
+    <connection>scm:git:git://github.com/octopranav/KombiN.git</connection>
+    <developerConnection>scm:git:ssh://github.com:octopranav/KombiN.git</developerConnection>
+    <url>https://github.com/octopranav/KombiN/tree/master/</url>
   </scm>
 
   <properties>
@@ -52,11 +52,11 @@
   <distributionManagement>
     <snapshotRepository>
       <id>ossrh</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+      <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
     </snapshotRepository>
     <repository>
       <id>ossrh</id>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+      <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
     </repository>
   </distributionManagement>
 
@@ -109,12 +109,12 @@
       <plugin>
         <groupId>org.sonatype.plugins</groupId>
         <artifactId>nexus-staging-maven-plugin</artifactId>
-        <version>1.6.7</version>
+        <version>1.6.13</version>
         <extensions>true</extensions>
         <configuration>
           <serverId>ossrh</serverId>
-          <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-          <autoReleaseAfterClose>false</autoReleaseAfterClose>
+          <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
+          <autoReleaseAfterClose>true</autoReleaseAfterClose>
         </configuration>
       </plugin>
 
