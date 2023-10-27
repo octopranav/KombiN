@@ -4,10 +4,10 @@ This is the python implementation of KombiN, which is an algorithm to get index 
 
 ## Installation
 
-Available on [pypi](https://pypi.org/project/kombin/)
+Available on [pypi](https://pypi.org/project/kombin-algo-pranavpatel-ca/)
 
 ```diff
-pip install kombin
+pip install kombin-algo-pranavpatel-ca
 ```
 
 ## Usage
