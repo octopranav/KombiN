@@ -1,6 +1,6 @@
 
 import unittest
-from kombin import Table
+from src.kombin_algo_pranavpatel_ca import Table
 
 
 class TableTest(unittest.TestCase):
