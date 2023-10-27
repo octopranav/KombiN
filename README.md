@@ -2,7 +2,7 @@
 
 [![Maven Central](https://img.shields.io/maven-central/v/ninja.pranav.algorithms/kombin.svg?label=Maven%20Central)](https://central.sonatype.com/artifact/ca.pranavpatel.algo/kombin)
 [![NuGet](https://img.shields.io/nuget/v/Ca.Pranavpatel.Algo.Kombin?label=NuGet)](https://www.nuget.org/packages/Ca.Pranavpatel.Algo.Kombin)
-[![npm (scoped)](https://img.shields.io/npm/v/@pranav.ninja/algorithms-kombin)](https://www.npmjs.com/package/@pranav.ninja/algorithms-kombin)
+[![npm (scoped)](https://img.shields.io/npm/v/@pranavpatel.ca/algo-kombin)](https://www.npmjs.com/package/@pranavpatel.ca/algo-kombin)
 [![PyPI](https://img.shields.io/pypi/v/kombin-algo-pranavpatel-ca)](https://pypi.org/project/kombin-algo-pranavpatel-ca/)
 
 KombiN is an algorithm that gives Index # of weighted combination and back, works with combinations of two finite sets ordered by sum and then by difference of combination, without generating and enumerating through possible combinations.

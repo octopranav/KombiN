@@ -4,10 +4,10 @@ This is the TypeScript implementation of KombiN, which is an algorithm to get in
 
 ## Installation
 
-Available on [npm](https://www.npmjs.com/package/@pranav.ninja/algorithms-kombin)
+Available on [npm](https://www.npmjs.com/package/@pranavpatel.ca/algo-kombin)
 
 ```diff
-npm i @pranav.ninja/algorithms-kombin
+npm i @pranavpatel.ca/algo-kombin
 ```
 
 ## Usage
