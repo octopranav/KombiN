@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "kombin_algo_pranavpatel_ca"
+version = "1.0.0"
+authors = [
+  { name="Pranavkumar Patel", email="pranav003@gmail.com" },
+]
+description = "Indexing combinations from two finite sets."
+readme = "README.md"
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/octopranav/KombiN"
+"Bug Tracker" = "https://github.com/octopranav/KombiN/issues"
