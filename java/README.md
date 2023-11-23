@@ -12,7 +12,7 @@ where set 'A' has 100 elements and set 'B' has 80 elements and both sets has zer
 
 ```java
 
-import ninja.pranav.algorithms.kombin;
+import ca.pranavpatel.algo.kombin;
 
 // Initialize object of Table class
 Table myObj = new Table(100, 80, true);
