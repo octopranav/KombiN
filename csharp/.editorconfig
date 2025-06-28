@@ -27,3 +27,10 @@ dotnet_diagnostic.IDE0047.severity = silent
 
 # IDE0048: Parentheses should be added for clarity
 dotnet_diagnostic.IDE0048.severity = silent
+
+# IDE0130: Namespace does not match folder structure
+dotnet_style_namespace_match_folder = false
+
+# CA1515: Consider making public types internal
+dotnet_diagnostic.CA1515.severity = silent
+
