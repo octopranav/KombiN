@@ -65,18 +65,19 @@ Compute $k = f(i,j)$ for a given pair $(i,j)$:
 
 1. Base count:
 
-   $$
-     B(w) = \sum_{s=2}^{w-1}(s-1) = \frac{(w-2)(w-1)}{2}
-   $$
-2. Zig-zag offset:
+$$
+B(w) = \sum_{s=2}^{w-1}(s-1) = \frac{(w-2)(w-1)}{2}
+$$
+
+3. Zig-zag offset:
 
    * If $(w-1)\bmod2=0$, offset = $i$.
    * Else, offset = $j$.
-3. Index:
+4. Index:
 
-   $$
-     k = B(w) + \text{offset}.
-   $$
+$$
+ k = B(w) + \text{offset}.
+$$
 
 ### Region II ($L+2 \le w \le H$)
 
@@ -84,17 +85,18 @@ Compute $k = f(i,j)$ for a given pair $(i,j)$:
 2. Each diagonal has $L$ pairs.
 3. Coordinate selector:
 
-   $$
-     \alpha = \begin{cases}
-       i, & N<M,\\
-       (M+1)-j, & N\ge M.
-     \end{cases}
-   $$
-4. Index:
+$$
+  \alpha = \begin{cases}
+   i, & N<M,\\
+   (M+1)-j, & N\ge M.
+  \end{cases}
+$$
 
-   $$
-     k = C_1 + d\,L + \alpha.
-   $$
+5. Index:
+
+$$
+ k = C_1 + d\,L + \alpha.
+$$
 
 ### Region III ($H+1 \le w \le S$)
 
@@ -102,9 +104,9 @@ Compute $k = f(i,j)$ for a given pair $(i,j)$:
 2. Compute $B(w')$ and offset as in Region I.
 3. Index:
 
-   $$
-     k = C_3 - (B(w') + \text{offset}) + 1.
-   $$
+$$
+ k = C_3 - (B(w') + \text{offset}) + 1.
+$$
 
 ---
 
@@ -122,10 +124,11 @@ Then:
 
 * Solve quadratic for weight:
 
-  $$
-    B(w) < k \le B(w+1)\;
-    w = \left\lceil\frac{\sqrt{8k+1}+1}{2}\right\rceil.
-  $$
+$$
+  B(w) < k \le B(w+1)\;
+  w = \left\lceil\frac{\sqrt{8k+1}+1}{2}\right\rceil.
+$$
+
 * Compute offset: if $(w-1)\bmod2=0$, $i = k-B(w), j=w-i$; else $j=k-B(w), i=w-j$.
 * For Region III, set $w'$ and invert mirror.
 
