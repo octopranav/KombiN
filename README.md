@@ -86,10 +86,11 @@ $$
 3. Coordinate selector:
 
 $$
- \alpha = \begin{cases}
-   i, & N<M,\\
-   (M+1)-j, & N\ge M.
- \end{cases}
+\alpha =
+\begin{cases}
+  i,          & N < M,    \\
+  (M+1) - j,  & N \ge M.
+\end{cases}
 $$
 
 5. Index:
