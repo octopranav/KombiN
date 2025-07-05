@@ -1,6 +1,6 @@
 # KombiN - .NET Library
 
-KombiN is a C#/.NET library for bijectively mapping all ordered pairs $(a_i, b_j)$ from two finite sets **A** and **B** into a single linear index. KombiN orders pairs by ascending *weight* (sum of indices) using a three-region zig-zag algorithm, enabling **O(1)** bidirectional lookups.
+KombiN is a library for bijectively mapping all ordered pairs $(a_i, b_j)$ from two finite sets **A** and **B** into a single linear index. KombiN orders pairs by ascending *weight* (sum of indices) using a three-region zig-zag algorithm, enabling **O(1)** bidirectional lookups.
 
 ---
 

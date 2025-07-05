@@ -9,7 +9,7 @@
     <!-- NuGet Package info -->
     <PackageId>Ca.Pranavpatel.Algo.Kombin</PackageId>
     <PackageVersion>1.0.3</PackageVersion>
-    <Description>KombiN is a cross-language library for bijectively mapping all ordered pairs from two finite sets into a single linear index. It orders pairs by ascending weight (sum of indices) using a three-region zig-zag algorithm, enabling O(1) bidirectional lookups between pairs and indices.</Description>
+    <Description>KombiN is a library for bijectively mapping all ordered pairs from two finite sets into a single linear index. It orders pairs by ascending weight (sum of indices) using a three-region zig-zag algorithm, enabling O(1) bidirectional lookups between pairs and indices.</Description>
     <Authors>Pranavkumar Patel</Authors>
     <PackageProjectUrl>https://github.com/octopranav/KombiN</PackageProjectUrl>
     <RepositoryUrl>https://github.com/octopranav/KombiN.git</RepositoryUrl>
