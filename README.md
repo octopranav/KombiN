@@ -149,7 +149,7 @@ All formulas are closed-form integer ops ($+, -, \times, /, \lfloor\cdot\rfloor,
 **Python**:
 
 ```bash
-pip install kombin
+pip install kombin-algo-pranavpatel-ca
 ```
 
 **C# (.NET)**:
