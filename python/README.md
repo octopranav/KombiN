@@ -1,29 +1,77 @@
 # KombiN - Python 3 Library
 
-This is the python implementation of KombiN, which is an algorithm to get index for combination pair and to get combination pair from index, where all possible combination pairs from two finite sets are sorted by their weight in ascending order.
+KombiN is a Python library for bijectively mapping all ordered pairs $(a_i, b_j)$ from two finite sets **A** and **B** into a single linear index. Pairs are ordered by ascending weight (sum of indices) using a three-region zig-zag algorithm, enabling **O(1)** bidirectional lookups between pairs and indices.
+
+---
 
 ## Installation
 
-Available on [pypi](https://pypi.org/project/kombin-algo-pranavpatel-ca/)
+Install from [PyPI](https://pypi.org/project/kombin-algo-pranavpatel-ca/):
 
-```diff
+```sh
 pip install kombin-algo-pranavpatel-ca
 ```
 
+---
+
 ## Usage
 
-where set 'A' has 100 elements and set 'B' has 80 elements and both sets has zerobased indexing.
+Suppose set **A** has 100 elements and set **B** has 80 elements, both using zero-based indexing:
 
-```py
+```python
 from kombin import Table
 
-# Initialize object of Table class
-myObj = Table(100, 80, true)
+# Initialize Table for sets A (100 elements) and B (80 elements), zero-based indexing
+myObj = Table(100, 80, True)
 
-# Get Index value for combination pair(ai: 46, bi: 72)
+# Get index for combination pair (ai: 46, bi: 72)
 index = myObj.GetIndexOfElements(46, 72)
 
 # Get combination pair from index value
-ai, bi = myObj.GetElementsAtIndex(index);
-
+ai, bi = myObj.GetElementsAtIndex(index)
 ```
+
+---
+
+## API Reference
+
+### Table Class
+
+**Constructor:**
+```python
+Table(lengthOfA: int, lengthOfB: int, zeroBasedIndex: bool)
+```
+- `lengthOfA`: Number of elements in set A.
+- `lengthOfB`: Number of elements in set B.
+- `zeroBasedIndex`: `True` for zero-based, `False` for one-based indexing.
+
+**Methods:**
+- `GetIndexOfElements(ai: int, bi: int) -> int`  
+  Returns the unique index for the pair `(ai, bi)`.
+
+- `GetElementsAtIndex(index: int) -> Tuple[int, int]`  
+  Returns the pair `(ai, bi)` for the given index.
+
+---
+
+## Example: Enumerate All Pairs by Weight
+
+```python
+table = Table(3, 3, False)
+for i in range(1, 10):
+    ai, bi = table.GetElementsAtIndex(i)
+    print(f"{i}: ({ai}, {bi})")
+```
+
+---
+
+## Edge Cases & Error Handling
+
+- Raises `ValueError` for invalid indices or set sizes.
+- Large `lengthOfA` or `lengthOfB` may cause integer overflows in some environments.
+
+---
+
+## License
+
+MIT License. See LICENSE

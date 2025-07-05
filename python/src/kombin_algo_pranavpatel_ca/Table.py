@@ -22,7 +22,7 @@ class Table:
             ValueError: if lengthOfA or lengthOfB is 0 or less.
         """
         if (lengthOfA < 1 or lengthOfB < 1):
-            raise ValueError("Length of both sets must be grater than 0.")
+            raise ValueError("Length of both sets must be greater than 0.")
 
         self._LengthOfA = lengthOfA
         self._LengthOfB = lengthOfB
