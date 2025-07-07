@@ -27,7 +27,7 @@ package ca.pranavpatel.algo.kombin;
  * This class is used to encapsulate the indices of a pair in the KombiN mapping.
  *
  * @author Pranavkumar Patel
- * @version $Id: $Id
+ * @version 1.0.3
  */
 public class Pair {
     public final long ai;

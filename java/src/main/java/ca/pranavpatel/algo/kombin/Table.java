@@ -36,7 +36,7 @@ package ca.pranavpatel.algo.kombin;
  * Methods allow retrieving the index for a given pair and retrieving the pair for a given index.
  *
  * @author Pranavkumar Patel
- * @version $Id: $Id
+ * @version 1.0.3
  */
 public class Table {
     public final long LengthOfA;
