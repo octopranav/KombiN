@@ -23,7 +23,8 @@
 package ca.pranavpatel.algo.kombin;
 
 /**
- * Combination Pair
+ * Represents an ordered combination pair (ai, bi) from two finite sets.
+ * This class is used to encapsulate the indices of a pair in the KombiN mapping.
  *
  * @author Pranavkumar Patel
  * @version $Id: $Id
@@ -32,10 +33,10 @@ public class Pair {
     public final long ai;
     public final long bi;
     /**
-     * <p>Constructor for Pair.</p>
+     * Constructs a Pair object representing the indices of a combination pair.
      *
-     * @param ai a long.
-     * @param bi a long.
+     * @param ai the index from the first set (A)
+     * @param bi the index from the second set (B)
      */
     public Pair(long ai, long bi) {
         this.ai = ai;
