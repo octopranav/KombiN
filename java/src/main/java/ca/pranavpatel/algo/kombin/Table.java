@@ -29,8 +29,11 @@
 package ca.pranavpatel.algo.kombin;
 
 /**
- * Provides a methods to get index of combination pair
- * and to get combination pair from index value.
+ * Provides O(1) bijective mapping between ordered pairs from two finite sets and a unique linear index,
+ * where all possible combination pairs are sorted by their weight (sum of indices) in ascending order.
+ * Supports both zero-based and one-based indexing.
+ *
+ * Methods allow retrieving the index for a given pair and retrieving the pair for a given index.
  *
  * @author Pranavkumar Patel
  * @version $Id: $Id
@@ -48,17 +51,16 @@ public class Table {
     public final boolean ZeroBasedIndex;
 
     /**
-     * Initializes a new instance of the {@link ca.pranavpatel.algo.kombin.Table} class
-     * and Sets an abstract values useful to get index and combination pair.
+     * Initializes a new instance of the {@link Table} class and precomputes values for efficient mapping.
      *
-     * @param lengthOfA Number of elements in first set.
-     * @param lengthOfB Number of elements in second set.
-     * @param zeroBasedIndex True if sets index starts with zero otherwise False.
-     * @throws java.lang.IllegalArgumentException if length of any set is 0 or less.
+     * @param lengthOfA Number of elements in the first set.
+     * @param lengthOfB Number of elements in the second set.
+     * @param zeroBasedIndex True for zero-based indexing, false for one-based indexing.
+     * @throws IllegalArgumentException if the length of any set is 0 or less.
      */
     public Table(long lengthOfA, long lengthOfB, boolean zeroBasedIndex) {
         if (lengthOfA < 1 || lengthOfB < 1) {
-            throw new IllegalArgumentException("Length of both sets must be grater than 0.");
+            throw new IllegalArgumentException("Length of both sets must be greater than 0.");
         }
         this.LengthOfA = lengthOfA;
         this.LengthOfB = lengthOfB;
@@ -93,12 +95,12 @@ public class Table {
     }
 
     /**
-     * Get index value for the combination pair.
+     * Returns the unique index value for the given combination pair (ai, bi).
      *
      * @param ai Element index of set A.
      * @param bi Element index of set B.
      * @return Index value for the given combination pair.
-     * @throws java.lang.IllegalArgumentException if element index value is invalid.
+     * @throws IllegalArgumentException if element index values are invalid.
      */
     public long GetIndexOfElements(long ai, long bi) {
         if (this.ZeroBasedIndex) {
@@ -141,11 +143,11 @@ public class Table {
     }
 
     /**
-     * Get the combination pair for given index value.
+     * Returns the combination pair corresponding to the given index value.
      *
-     * @param index Index value of combination pair.
-     * @return combination pair {@link ca.pranavpatel.algo.kombin.Pair}
-     * @throws java.lang.IllegalArgumentException if Index value is invalid.
+     * @param index Index value of the combination pair.
+     * @return Pair object representing the combination (ai, bi).
+     * @throws IllegalArgumentException if the index value is invalid.
      */
     public Pair GetElementsAtIndex(long index) {
         if (this.ZeroBasedIndex) {
