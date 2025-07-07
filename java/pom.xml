@@ -6,11 +6,11 @@
 
   <groupId>ca.pranavpatel.algo</groupId>
   <artifactId>kombin</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.3</version>
   <packaging>jar</packaging>
 
-  <name>${project.groupId}:${project.artifactId}</name>
-  <description>KombiN is an algorithm to get index for combination pair or to get combination pair from index, where all possible combination pairs from two finite sets are sorted by their weight in ascending order.</description>
+  <name>ca.pranavpatel.algo:kombin</name>
+  <description>KombiN is a library for bijectively mapping all ordered pairs from two finite sets into a single linear index. It orders pairs by ascending weight (sum of indices) using a three-region zig-zag algorithm, enabling O(1) bidirectional lookups between pairs and indices.</description>
   <url>https://github.com/octopranav/KombiN</url>
 
   <licenses>
@@ -23,7 +23,7 @@
   <developers>
     <developer>
       <name>Pranavkumar Patel</name>
-      <email>pranav003@gmail.com</email>
+      <email>contact@pranavpatel.ca</email>
       <organizationUrl>https://github.com/octopranav</organizationUrl>
     </developer>
   </developers>
