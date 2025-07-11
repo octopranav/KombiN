@@ -164,7 +164,7 @@ dotnet add package Ca.Pranavpatel.Algo.Kombin
 <dependency>
   <groupId>ca.pranavpatel.algo</groupId>
   <artifactId>kombin</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.3</version>
 </dependency>
 ```
 
