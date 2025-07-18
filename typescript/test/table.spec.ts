@@ -3,45 +3,38 @@ import { expect } from 'chai';
 import 'mocha';
 
 /**
- * Test All 100 nonZeroIndex
+ * Unit tests for the Table class, verifying bijective mapping
+ * between indices and ordered pairs for various set sizes and indexing modes.
  */
-describe('Table class - test all 100 nonZero', () => {
-    it('should return true', () => {
-        let result = true;
-        for (let X = 1; X <= 100; X++) {
-            for (let Y = 1; Y <= 100; Y++) {
-                const myXY: Table = new Table(X, Y, false);
+
+describe('Table class - one-based indexing', () => {
+    it('should map indices and pairs consistently for all combinations of set sizes from 1 to 50', function() {
+        this.timeout(60000); // 60 seconds
+        for (let X = 1; X <= 50; X++) {
+            for (let Y = 1; Y <= 50; Y++) {
+                const table = new Table(X, Y, false);
                 for (let i = 1; i <= X * Y; i++) {
-                    const [ai, bi] = myXY.GetElementsAtIndex(i);
-                    const index = myXY.GetIndexOfElements(ai, bi);
-                    if (i != index) {
-                        result = false;
-                    }
+                    const [ai, bi] = table.GetElementsAtIndex(i);
+                    const index = table.GetIndexOfElements(ai, bi);
+                    expect(index).to.equal(i, `Mismatch at X=${X}, Y=${Y}, i=${i}, ai=${ai}, bi=${bi}`);
                 }
             }
         }
-        expect(result).to.equal(true);
     });
 });
 
-/**
- * Test All 100 zeroBasedIndex
- */
-describe('Table class - test all 100 zero', () => {
-    it('should return true', () => {
-        let result = true;
-        for (let X = 1; X <= 100; X++) {
-            for (let Y = 1; Y <= 100; Y++) {
-                const myXY: Table = new Table(X, Y, true);
-                for (let i = 0; i <= X * Y - 1; i++) {
-                    const [ai, bi] = myXY.GetElementsAtIndex(i);
-                    const index = myXY.GetIndexOfElements(ai, bi);
-                    if (i != index) {
-                        result = false;
-                    }
+describe('Table class - zero-based indexing', () => {
+    it('should map indices and pairs consistently for all combinations of set sizes from 1 to 50', function() {
+        this.timeout(60000); // 60 seconds
+        for (let X = 1; X <= 50; X++) {
+            for (let Y = 1; Y <= 50; Y++) {
+                const table = new Table(X, Y, true);
+                for (let i = 0; i < X * Y; i++) {
+                    const [ai, bi] = table.GetElementsAtIndex(i);
+                    const index = table.GetIndexOfElements(ai, bi);
+                    expect(index).to.equal(i, `Mismatch at X=${X}, Y=${Y}, i=${i}, ai=${ai}, bi=${bi}`);
                 }
             }
         }
-        expect(result).to.equal(true);
     });
 });

@@ -1,21 +1,21 @@
 // Copyright (c) 2020 Pranavkumar Patel. All rights reserved. Licensed under the MIT license.
 
 /**
- * Provides a methods to get index of combination pair
- * and to get combination pair from index value.
+ * Table provides O(1) bijective mapping between ordered pairs from two finite sets and a unique linear index.
+ * All possible combination pairs are sorted by their weight (sum of indices) in ascending order.
+ * Supports both zero-based and one-based indexing.
  */
 export class Table {
     /**
-     * Initializes a new instance of the Table  class.
-     * @param lengthOfA Number of elements in first set.
-     * @param lengthOfB Number of elements in second set.
-     * @param zeroBasedIndex True if sets index starts with zero otherwise False.
-     * @returns Table object.
+     * Initializes a new instance of the Table class.
+     * @param lengthOfA Number of elements in the first set.
+     * @param lengthOfB Number of elements in the second set.
+     * @param zeroBasedIndex True for zero-based indexing, false for one-based indexing.
      * @throws Error if lengthOfA or lengthOfB is 0 or less.
      */
     constructor(lengthOfA: number, lengthOfB: number, zeroBasedIndex: boolean) {
         if (lengthOfA < 1 || lengthOfB < 1) {
-            throw new Error('Length of both sets must be grater than 0.');
+            throw new Error('Length of both sets must be greater than 0.');
         }
         this.LengthOfA = lengthOfA;
         this.LengthOfB = lengthOfB;
@@ -47,7 +47,7 @@ export class Table {
     ZeroBasedIndex: boolean;
 
     /**
-     * Sets an abstract values useful to get index and combination pair.
+     * Computes and sets internal values used for index and pair calculations.
      */
     private Abstract(): void {
         this.LowerLength = this.LengthOfA < this.LengthOfB ? this.LengthOfA : this.LengthOfB;
@@ -73,10 +73,10 @@ export class Table {
     }
 
     /**
-     * Get index value for the combination pair.
+     * Returns the unique index value for the given combination pair (ai, bi).
      * @param ai Element index of set A.
      * @param bi Element index of set B.
-     * @returns  Index value for the given combination pair.
+     * @returns Index value for the given combination pair.
      * @throws Error if ai or bi has invalid value.
      */
     public GetIndexOfElements(ai: number, bi: number): number {
@@ -124,9 +124,9 @@ export class Table {
     }
 
     /**
-     * Get the combination pair for given index value.
-     * @param index Index value of combination pair.
-     * @returns  combination pair
+     * Returns the combination pair corresponding to the given index value.
+     * @param index Index value of the combination pair.
+     * @returns Tuple [ai, bi] representing the combination pair.
      * @throws Error if index has invalid value.
      */
     public GetElementsAtIndex(index: number): [number, number] {

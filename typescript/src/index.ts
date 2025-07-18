@@ -1,10 +1,9 @@
 // Copyright (c) 2020 Pranavkumar Patel. All rights reserved. Licensed under the MIT license.
 
 /**
- * KombiN is an algorithm to get index for combination pair and
- * to get combination pair from index, where all possible
- * combination pairs from two finite sets are sorted by their weight
- * in ascending order.
+ * KombiN is a library for bijectively mapping all ordered pairs from two finite sets into a single linear index.
+ * It orders pairs by ascending weight (sum of indices) using a three-region zig-zag algorithm,
+ * enabling O(1) bidirectional lookups between pairs and indices.
  */
 
 export { Table } from './Table';
