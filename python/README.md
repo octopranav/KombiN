@@ -19,7 +19,7 @@ pip install kombin-algo-pranavpatel-ca
 Suppose set **A** has 100 elements and set **B** has 80 elements, both using zero-based indexing:
 
 ```python
-from kombin import Table
+from kombin_algo_pranavpatel_ca import Table
 
 # Initialize Table for sets A (100 elements) and B (80 elements), zero-based indexing
 myObj = Table(100, 80, True)

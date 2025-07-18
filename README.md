@@ -178,8 +178,10 @@ npm install kombin
 
 ## Quick Start
 
+**Python**
+
 ```python
-from kombin import Table
+from kombin_algo_pranavpatel_ca import Table
 
 t = Table(5,4,True)
 idx = t.GetIndexOfElements(2,3)
@@ -195,11 +197,15 @@ var idx = tbl.GetIndexOfElements(2,3);
 var (i,j) = tbl.GetElementsAtIndex(idx);
 ```
 
+**Java**
+
 ```java
 Table tbl = new Table(5,4,true);
 long idx = tbl.GetIndexOfElements(2,3);
 Pair p = tbl.GetElementsAtIndex(idx);
 ```
+
+**Typescript**
 
 ```ts
 import {Table} from 'kombin';
